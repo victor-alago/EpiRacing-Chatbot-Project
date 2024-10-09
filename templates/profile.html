@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EpiRacing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid" style="text-align: center;">
+          <img src="{{ url_for('static', filename='images/epita-logo.png') }}" alt="Epita Logo" width="80" height="50">
+          <img src="{{ url_for('static', filename='images/F1-logo.png') }}" alt="Formular1 Logo" width="80" height="50">
+          <img src="{{ url_for('static', filename='images/formula-b.png') }}" alt="Karting Logo" width="80" height="50">
+          <a class="epiracing">EpiRacing Students Association</a>      
+      </div>
+    </nav>
+
+    <div class="container text-center" style="margin: 20px 0;">
+        <a href="{{ url_for('index') }}" class="btn-home">Go to Home</a>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2 class="auth-title">Profile</h2>
+            <p>Email: <strong>{{ email }}</strong></p>
+
+            <form action="/profile" method="POST">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="Enter your first name"
+                           value="{{ profile_data['first_name'] }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Enter your last name"
+                           value="{{ profile_data['last_name'] }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Enter your age"
+                           value="{{ profile_data['age'] }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="year_of_admission">Year of Admission</label>
+                    <input type="number" name="year_of_admission" id="year_of_admission" placeholder="Enter the year you were admitted"
+                           value="{{ profile_data['year_of_admission'] }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course_of_study">Course of Study</label>
+                    <input type="text" name="course_of_study" id="course_of_study" placeholder="Enter your course of study"
+                           value="{{ profile_data['course_of_study'] }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Why do you want to join the EpiRacing Club?</label>
+                    <textarea name="motivation" id="motivation" placeholder="Describe why you'd like to join" rows="5" style="width: 98%;" required>{{ profile_data['motivation'] }}</textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Update Profile</button>
+            </form>
+
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <footer class="footer">
+      <div class="line-separator"></div>
+      <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">FAQs</a>
+      </div>
+    </footer>
+
+</body>
+</html>

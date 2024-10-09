@@ -1,0 +1,217 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi", "Hello", "Hey there", "Good morning", "Good afternoon", "Hiya", "Howdy", "Greetings", "Salutations", "What's up", "What's going on"
+        ],
+        "responses": [
+          "Hello! Welcome to EpiRacing, where passion for racing thrives. How can I assist you today?",
+          "Hi there! Ready to dive into the world of racing? Let me know how I can help you.",
+          "Greetings! EpiRacing at your service. What would you like to explore today?"
+        ]
+      },
+      {
+        "tag": "club_benefits",
+        "patterns": [
+          "Why join EpiRacing?", "What do I get by joining EpiRacing?", "Benefits of joining the racing club", "Advantages of being an EpiRacing member", "Perks of joining our racing club"
+        ],
+        "responses": [
+          "Joining EpiRacing means exclusive access to races, expert sessions, and networking with racing professionals and enthusiasts alike.",
+          "Members enjoy benefits like discounted event fees, access to members-only races, and first dibs on all our racing workshops."
+        ]
+      },
+      {
+        "tag": "club_history",
+        "patterns": [
+          "Tell me the history of EpiRacing", "How was EpiRacing founded?", "Origin of EpiRacing", "Who started EpiRacing and why?", "Historical background of EpiRacing"
+        ],
+        "responses": [
+          "EpiRacing was born from a passion for motorsports among EPITA students in 2024, seeking to create a dynamic community for car lovers.",
+          "Founded by Victor Alago and a team of enthusiastic students, EpiRacing started as a small group and quickly became a staple club at EPITA for all things racing."
+        ]
+      },
+      {
+        "tag": "join_club",
+        "patterns": [
+          "How can I join EpiRacing?", "Steps to join EpiRacing", "Joining process for the racing club", "How to become a member of EpiRacing", "I want to be part of EpiRacing"
+        ],
+        "responses": [
+          "Joining EpiRacing is simple! Visit our website to fill out the membership form, or come meet us in person at one of our events to sign up.",
+          "Just head over to our website or attend an upcoming event and register there. Welcome aboard!"
+        ]
+      },
+      {
+        "tag": "events",
+        "patterns": [
+          "What's the next EpiRacing event?", "Upcoming events at EpiRacing", "Schedule of future races", "Next racing event details", "Calendar of EpiRacing events"
+        ],
+        "responses": [
+          "Our next event is the thrilling Summer Endurance Race on September 20th at Montlhéry Track. Join us for an unforgettable experience!",
+          "Check out the upcoming Grand Prix event on October 15th at Circuit de Paris. It's going to be exciting!"
+        ]
+      },
+      {
+        "tag": "go-karting",
+        "patterns": [
+          "Go-karting tracks by EpiRacing", "Where to go go-karting?", "Nearest go-kart tracks", "Best places for go-karting near EPITA", "Go-karting facilities recommended by EpiRacing"
+        ],
+        "responses": [
+          "You can enjoy go-karting at Paris Kart Indoor, just a short drive from EPITA, offering top-notch tracks and karts.",
+          "For the best go-karting experience, visit Karting de Montlhéry, renowned for its challenging tracks and great atmosphere."
+        ]
+      },
+      {
+        "tag": "racing_rules",
+        "patterns": [
+          "Explain the rules of racing", "What are the regulations at EpiRacing events?", "Racing guidelines I should follow", "Rules for racing competitions", "Safety protocols for races"
+        ],
+        "responses": [
+          "Safety is our top priority! Always wear appropriate gear, follow the marshal's instructions, and maintain respectful conduct on the track.",
+          "Rules include helmet and safety gear requirements, adherence to track limits, and respect for other racers and officials."
+        ]
+      },
+      {
+        "tag": "racing_simulations",
+        "patterns": [
+          "About racing simulations at EpiRacing", "Joining a racing simulator event", "Types of racing sim competitions", "Can I practice racing simulations?", "Virtual racing competitions"
+        ],
+        "responses": [
+          "We regularly host racing simulation events where members can hone their skills on professional-grade racing simulators.",
+          "Join our virtual racing event this October at EPITA! A great opportunity to test your skills on our high-end simulators."
+        ]
+      },
+      {
+        "tag": "car_information",
+        "patterns": [
+          "Tell me about the best racing cars", "What kind of cars are good for racing?", "Best cars for beginners", "What cars are best for track racing?", "Which cars dominate in motorsports?"
+        ],
+        "responses": [
+          "For beginners, cars like the Mazda MX-5 and BMW M3 are fantastic for learning on the track.",
+          "For competitive racing, the Ferrari 488, Porsche 911 GT3, and McLaren 720S are among the best in their classes."
+        ]
+      },
+      {
+        "tag": "jokes",
+        "patterns": [
+          "Tell me a car joke", "Any funny racing jokes?", "Make me laugh with a joke about cars", "Do you know any racing jokes?"
+        ],
+        "responses": [
+          "Why don't race cars ever get lost? They always follow the right track!",
+          "Why was the race car so calm? It had great brakes!"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Goodbye", "See you later", "I'm off now", "Catch you later", "It's time for me to go"
+        ],
+        "responses": [
+          "Goodbye! See you at the next EpiRacing event.",
+          "Take care! Drive safe and see you soon on the track."
+        ]
+      },
+      {
+        "tag": "team_information",
+        "patterns": [
+          "Who are the leaders of EpiRacing?", "Tell me about the leadership team at EpiRacing", "Who runs EpiRacing events?", "Who's the president of EpiRacing?", "Who manages the club?"
+        ],
+        "responses": [
+          "EpiRacing is led by Victor Alago, our dedicated president, alongside a strong team of event organizers and student volunteers.",
+          "Our leadership team includes Victor Alago as president, with event coordinators and experienced racers helping organize our events."
+        ]
+      },
+      {
+        "tag": "reminders",
+        "patterns": [
+          "Remind me about the next event", "Can you give me a reminder for the next race?", "Send me a reminder about the next EpiRacing event", "When's the next event?", "Can you remind me about the go-kart race?"
+        ],
+        "responses": [
+          "Sure! I'll remind you that the next race is on October 15th at Circuit de Paris. Mark your calendar!",
+          "Consider this your reminder: EpiRacing's next event is this weekend at Montlhéry."
+        ]
+      },
+      {
+        "tag": "technical_car_tips",
+        "patterns": [
+          "How do I improve my car's performance?", "What are some tips for tuning a car for racing?", "How can I make my car faster on the track?", "Can you give me tips for upgrading my car?", "How can I increase my lap speed?"
+        ],
+        "responses": [
+          "To improve lap times, focus on upgrading your tires, enhancing aerodynamics, and optimizing your suspension for better handling.",
+          "Consider reducing weight, adding a performance exhaust system, and upgrading your braking system for more speed and control."
+        ]
+      },
+      {
+        "tag": "racing_results",
+        "patterns": [
+          "What were the results of the last race?", "Who won the last go-karting event?", "Can you tell me who finished first in the race?", "What were the lap times for the last race?", "Who took the win in the recent event?"
+        ],
+        "responses": [
+          "In the last go-kart race, Sophie Dupont took first place with an impressive lap time of 1:24.5!",
+          "The winner of the last race at Montlhéry was Victor Alago with a lap time of 1:22.6."
+        ]
+      },
+      {
+        "tag": "club_rules",
+        "patterns": [
+          "What are the rules of EpiRacing?", "Tell me the rules of the club", "What regulations should I follow as a member?", "Are there any specific club guidelines?", "What rules should I follow for races?"
+        ],
+        "responses": [
+          "EpiRacing values safety, respect, and sportsmanship. Always adhere to track guidelines, be respectful to other drivers, and prioritize safety.",
+          "Our club rules include following track marshal instructions, wearing safety gear, and maintaining fair play during races."
+        ]
+      },
+      {
+        "tag": "event_fees",
+        "patterns": [
+          "What's the cost for events?", "How much is the go-kart event fee?", "Do I need to pay for racing simulation events?", "What are the fees for joining an event?", "Are there any costs for participating in races?"
+        ],
+        "responses": [
+          "The participation fee for go-karting events is €25. Simulations are free for members but cost €10 for non-members.",
+          "For most racing events, the entry fee is €25, and simulation races are free for club members."
+        ]
+      },
+      {
+        "tag": "car_review",
+        "patterns": [
+          "Can you review the Porsche 911?", "What do you think about the Ferrari 488?", "Tell me about the McLaren 720S", "Is the Bugatti Chiron good for racing?", "Can you review the Lamborghini Huracan?"
+        ],
+        "responses": [
+          "The Porsche 911 is a fantastic all-rounder for both track and road use, known for its balance and precision handling.",
+          "The Ferrari 488 is a beast on the track, with its twin-turbo V8 delivering outstanding performance.",
+          "The McLaren 720S excels in both speed and aerodynamics, making it a top choice for serious track enthusiasts."
+        ]
+      },
+      {
+        "tag": "club_staff",
+        "patterns": [
+          "Who's the club president?", "Tell me about Victor Alago", "Who runs EpiRacing?", "Who's the leader of EpiRacing?", "Who's in charge of the club?"
+        ],
+        "responses": [
+          "Victor Alago is the current president of EpiRacing and the mastermind behind organizing our exciting racing events.",
+          "EpiRacing is led by Victor Alago, a passionate motorsports enthusiast who brings energy and vision to the club."
+        ]
+      },
+      {
+        "tag": "registration_help",
+        "patterns": [
+          "I need help registering", "I'm having trouble signing up", "How do I fix an error during registration?", "How do I complete my registration?", "I can't register, can you help?"
+        ],
+        "responses": [
+          "If you're having trouble registering, try refreshing the page or contact us at [email] for assistance.",
+          "You can try clearing your browser cache or using a different browser. If the issue persists, feel free to reach out to our support team."
+        ]
+      },
+      {
+        "tag": "FAQs",
+        "patterns": [
+          "What time does the event start?", "Where do I park for the event?", "Do I need to bring my own helmet?", "Is parking available at the event?", "What do I need to bring to the race?"
+        ],
+        "responses": [
+          "The event starts at 10 AM. Be sure to arrive 30 minutes early for registration.",
+          "Parking is available at the event location and is free for attendees.",
+          "Helmets are provided, but you're welcome to bring your own if you prefer."
+        ]
+      }
+    ]
+  }

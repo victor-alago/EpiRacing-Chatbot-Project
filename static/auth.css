@@ -1,0 +1,206 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar-links a:hover {
+    color: #ff4500; 
+}
+
+/* Authentication container */
+.auth-container {
+    display: flex;
+    position: relative;
+    overflow: auto;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #f8f8f8;
+    margin: 50px; 
+}
+
+/* Authentication box styling */
+.auth-box {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title styling */
+.auth-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #4f4f4f;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #a1a1a1;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff4500;
+}
+
+/* Button styling */
+.btn-submit {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #ff0000;
+}
+
+/* Forgot password link */
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ff4500;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Footer text styling */
+.auth-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: #ff4500;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Line separator */
+.line-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.footer-links a {
+    color: #4f4f4f;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ff4500;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .auth-box {
+        padding: 1.5rem;
+    }
+
+    .navbar-logo img {
+        height: 30px;
+    }
+}
+
+/* EPIRACING brand styles */
+.epiracing {
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: 900; 
+    color: #8B0000; 
+    font-style: italic; 
+    text-decoration: none; 
+    margin-left: 20px;
+    position: absolute;
+    right: 150px;
+}
+
+
+/* Home Button Styling */
+.btn-home {
+    
+    display: inline-block;
+    background-color: #8B0000; 
+    color: white;
+    padding: 6px 6px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn-home:hover {
+    background-color: #ff0000; 
+}

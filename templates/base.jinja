@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EpiRacing Club - EPITA Paris</title>
+    {# favicon #}
+    <link rel="icon" href="{{ url_for('static', filename='images/epita-logo.png') }}" type="image/x-icon">
+    {# Google Fonts #}
+    
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Bootstrap (for easy responsiveness) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    {# <button onclick="alert('Button clicked!')">Test Button</button> #}
+     <!-- Top Navbar (Login, Contact) -->
+    <nav class="navbar navbar-light bg-light py-2" aria-label="Login to your account">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Centered EpiRacing text -->
+            <a class="epiracing" href="#">EpiRacing Students Association</a>
+
+        <!-- Right-aligned Login/Profile and Contact Us -->
+        <div class="d-flex justify-content-end">
+            {% if current_user.is_authenticated %}
+                <!-- If the user is logged in, show Profile link -->
+                <a class="nav-link" href="/profile">Profile</a>
+                <span style="margin: 0 15px;"></span>
+                <a class="nav-link" href="/logout">Logout</a> <!-- Option to logout -->
+            {% else %}
+                <!-- If the user is not logged in, show Login link -->
+                <a class="nav-link" href="/login">Login</a>
+            {% endif %}
+            <span style="margin: 0 15px;"></span> <!-- Space between links -->
+            <a class="nav-link" href="#contact">Contact Us</a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main Navbar (Primary Navigation) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main NavBar">
+        <div class="container-fluid">
+            <img src="{{ url_for('static', filename='images/epita-logo.png') }}" alt="Epita Logo" width="80" height="50">
+            <img src="{{ url_for('static', filename='images/F1-logo.png') }}" alt="Formular1 Logo" width="80" height="50">
+            <img src="{{ url_for('static', filename='images/formula-b.png') }}" alt="Karting Logo" width="80" height="50">
+            {# <a class="navbar-brand" href="#">EpiRacing</a> #}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Racing News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EpiCars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sponsors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">"Racing is Where Passion Meets Precision"</h1>
+            <p class="hero-quote">
+                "At EpiRacing, we believe that racing is not just a sport, but a platform where engineering meets passion, and education fuels innovation."
+                <br>
+                <em>— Club President, Victor Alago</em>
+            </p>
+            <a href="#events" class="btn-join-events">Discover Our Events</a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- Sliding Block Section -->
+    <section class="slider-block" id="events">
+        <div>
+            <h2 >Upcoming Events</h2>
+            <div class="slider">
+                <div>
+                    <div style="margin: 5px;"> 
+                        <img src="static/images/daytona-karting-03.jpg" alt="Go-Kart Racing Event" >
+                    </div>
+                    <div class="slider-content">
+                        <h5>Go-Kart Racing at Paris Kart Indoor</h5>
+                        <p>October 15th, 2024</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin: 5px;">
+                        <img src="static/images/debuter-en-simracing-860x482.webp" alt="Racing Simulation Event" >
+                    </div>
+                    
+                    <div class="slider-content">
+                        <h5>Racing Simulations on Campus</h5>
+                        <p>November 5th, 2024</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin: 5px;"> 
+                        <img src="static/images/grand-prix-monaco.jpeg" alt="Grand Prix Event" >
+                    </div>
+                    
+                    <div class="slider-content">
+                        <h5>Annual Grand Prix at Circuit de Monaco</h5>
+                        <p>May 27th, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <i class="fas fa-tachometer-alt fa-3x mt-3"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">High-Speed Racing</h5>
+                            <p class="card-text">Experience the thrill of high-speed racing on professional tracks with EpiRacing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <i class="fas fa-car fa-3x mt-3"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Car Enthusiasts</h5>
+                            <p class="card-text">Join a community of car lovers who share a passion for performance vehicles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <i class="fas fa-road fa-3x mt-3"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Go-Kart Competitions</h5>
+                            <p class="card-text">Compete in go-kart racing events and test your skills on the track.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- ChatBot -->
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="User Icon">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">Hi. My name is Mia. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" alt="Chatbox Button" /></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EpiRacing - EPITA Paris. All rights reserved.</p>
+    </footer>
+
+    <!-- Slick Slider and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
